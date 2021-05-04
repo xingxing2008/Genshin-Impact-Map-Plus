@@ -1,2 +1,3 @@
-2021/05/03-12:23:48.361 3b68 Creating DB C:\Users\Xingxing520\source\repos\Genshin_Map\bin\Release\Genshin_Map.exe.WebView2\EBWebView\Default\Local Storage\leveldb since it was missing.
-2021/05/03-12:23:48.499 3b68 Reusing MANIFEST C:\Users\Xingxing520\source\repos\Genshin_Map\bin\Release\Genshin_Map.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2021/05/04-08:06:00.421 523c Reusing MANIFEST C:\Users\Xingxing520\Documents\程序项目\Genshin-Impact-Map-Plus\bin\Release\Genshin_Map.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2021/05/04-08:06:00.422 523c Recovering log #3
+2021/05/04-08:06:00.423 523c Reusing old log C:\Users\Xingxing520\Documents\程序项目\Genshin-Impact-Map-Plus\bin\Release\Genshin_Map.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000003.log 
