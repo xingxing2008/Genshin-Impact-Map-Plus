@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -28,6 +29,12 @@ namespace Genshin_Map
     public partial class MainWindow : Window
     {
         public bool minibutton = true;
+
+        [DllImport("user32.dll", EntryPoint = "keybd_event", CharSet = CharSet.Auto, ExactSpelling = true)]
+        public static extern void Keybd_event(byte vk, byte scan, int flags, int extrainfo);
+        const int KEYEVENTF_EXTENDEDKEY = 0x1;
+        const int KEYEVENTF_KEYUP = 0x2;
+
         [DllImport("user32.dll")]
         private static extern int SetWindowPos(IntPtr hWnd, int hWndInsertAfter, int x, int y, int Width, int Height, int flags);
         /// <summary>
@@ -50,6 +57,19 @@ namespace Genshin_Map
             MainPage.Visibility = Visibility.Visible;
             HotkeyManager.Current.AddOrReplace("visiblemap", Key.M, ModifierKeys.Control,setmap);
             HotkeyManager.Current.AddOrReplace("collapsedminibutton", Key.L, ModifierKeys.Control, collapsedminibutton);
+            HotkeyManager.Current.AddOrReplace("e3", Key.D3, ModifierKeys.Alt,e3);
+        }
+
+        private void e3(object sender, HotkeyEventArgs e)
+        {
+            Task.Run(() => {
+                Keybd_event((byte)12, 50, KEYEVENTF_EXTENDEDKEY, 0);
+                Thread.Sleep(200);
+                Keybd_event((byte)12, 69, KEYEVENTF_EXTENDEDKEY, 0);
+                //Thread.Sleep(new Random().Next(500,1000));
+                Keybd_event((byte)12, 69, KEYEVENTF_KEYUP, 0);
+            });
+
         }
         private void setmap(object sender, HotkeyEventArgs e)
         {

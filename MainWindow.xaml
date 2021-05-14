@@ -7,7 +7,7 @@
         xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="1080" WindowStyle="None" Loaded="Window_Loaded" Background="Transparent"  AllowsTransparency="True" >
+        Title="MainWindow" Height="550" Width="1080" WindowStyle="None" Loaded="Window_Loaded" Background="Transparent"  AllowsTransparency="True" ShowActivated="False" >
     <Window.Resources>
         <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="#6ec6ff"/>
         <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#0069c0"/>
